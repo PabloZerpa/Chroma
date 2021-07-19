@@ -1,0 +1,184 @@
+:root {
+  --primary: #0767ce;
+}
+
+/******************************* GALLERY *******************************/
+.galleryArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .galleryArea .galleryButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .galleryArea .galleryButtons button {
+    width: 150px;
+    height: 45px;
+    margin: 10px 5px 30px 5px;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--primary);
+    color: #000;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  
+  .galleryArea .galleryButtons button:hover {
+    background-color: #000;
+    color: var(--primary);
+    border: 3px solid var(--primary);
+    transition: .75s;
+  }
+  
+  .galleryArea .gallery {
+    width: 100%;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+    grid-auto-rows: 144px;
+    gap: 10px;
+  }
+  
+  .galleryArea .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+  }
+  
+  .galleryArea .gallery img:hover {
+    transform: scale(1.1);
+    filter: contrast(125%);
+    transition: .5s;
+  }
+  
+  .galleryArea .gallery img:first-child {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  
+  .galleryArea .gallery img:nth-child(5) {
+    grid-row: span 3;
+  }
+  
+  .galleryArea .gallery img:nth-child(18) {
+    grid-column: span 3;
+  }
+
+  /******************************* BANNER *******************************/
+.joinUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75vh;
+  margin: 100px 0 100px 0;
+}
+
+.joinUs #bannerBg {
+  opacity: .4;
+  position: absolute;
+  width: 100%;
+  height: 600px;
+}
+
+.joinUs .box1, .joinUs .box2 {
+  position: relative;
+  width: 25%;
+  height: 400px;
+  background-color: #000000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.joinUs .box1
+{
+  margin-right: 200px;
+}
+
+.joinUs .box1 img, .joinUs .box2 img {
+  width: 50px;
+  height: 50px;
+}
+
+.joinUs .box1 button, .joinUs .box2 button {
+  
+  width: 150px;
+  height: 30px;
+  margin-top: 275px;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.joinUs .box1 button:hover, .joinUs .box2 button:hover {
+  background-color: #000;
+  border: 3px solid var(--primary);
+  transition: .75s;
+}
+
+.joinUs .box2 {
+  margin: 0 0 0 200px;
+}
+
+.joinUs ul {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.joinUs ul li {
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 10px 0 10px 0;
+  color: #ffffff;
+}
+
+.joinUs ul i {
+  margin: 10px 0 10px 0;
+  color: var(--primary);
+}
+
+@media screen and (max-width: 880px) 
+{
+  .joinUs .box1{
+
+    margin-right: 150px;
+  }
+
+  .joinUs .box2 {
+    margin-left: 150px;
+  }
+
+  .joinUs .box1, .joinUs .box2{
+    width: 35%;
+    height: 400px;
+  }
+
+}
+
+@media screen and (max-width: 720px) 
+{
+  .joinUs .box1{
+
+    margin-right: 50px;
+  }
+
+  .joinUs .box2{
+
+    margin-left: 50px;
+  }
+
+}

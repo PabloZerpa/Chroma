@@ -1,0 +1,379 @@
+:root {
+  --primary: #1888ff;
+}
+
+.navbar {
+  background: linear-gradient(90deg, rgb(29, 29, 29) 0%, rgb(22, 22, 22) 100%);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.navbar-logo {
+  color: #1888ff;
+  justify-self: start;
+  margin-left: 10%;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fa-palette {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+  width: 60vw;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.nav-menu i{
+  margin-right: 3px;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  border-bottom: 4px solid #1888ff;
+  color: #1888ff;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-input {
+  width: 200px;
+  height: 35px;
+  padding: 8px 20px;
+  border-radius: 3px;
+  margin: 20px 0px 16px 0px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background: #111;
+  color: #fff;
+  border: none;
+}
+
+.navLogin {
+  width: 105px;
+  height: 40px;
+  padding: 8px 20px;
+  margin: 0 0px 0 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  background-color: var(--primary);
+}
+
+.navLogin:hover {
+  padding: 6px 18px;
+  background-color: transparent;
+  color: var(--primary);
+  border-radius: 4px;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
+
+.navLogin a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navLogin a:hover {
+  color: var(--primary);
+}
+
+/* ===================  MODEL ============================== */
+
+nav .loginSignArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+
+nav .loginSignArea .modal {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+nav .loginSignArea #loginModal:target {
+  opacity: 1;
+  transition: .5s;
+  pointer-events: auto;
+}
+
+nav .loginSignArea #signModal:target {
+  opacity: 1;
+  transition: .5s;
+  pointer-events: auto;
+}
+
+nav .loginSignArea .modalWindow {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+nav .loginSignArea .modalContent {
+  width: 400px;
+  height: 600px;
+  position: relative;
+  margin: 8% auto;
+  background: #000;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 3px solid #0593e6;
+}
+
+nav .loginSignArea .modalContent .closeModal {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  top: 1%;
+  left: 90%;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+nav .loginSignArea .modalContent .closeModal a {
+  color: #000;
+}
+
+nav .loginSignArea .buttons {
+  position: relative;
+  width: 200px;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+
+nav .loginSignArea .formGroup {
+  top: 15%;
+  position: absolute;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: .5s;
+}
+
+nav .loginSignArea .formGroup button:hover {
+  background-color: #adadad;
+  transition: .5s;
+}
+
+nav .loginSignArea .formGroup i {
+  padding: 8px 0;
+  margin: 8px 0;
+}
+
+nav .loginSignArea .formGroup .userGroup {
+  display: flex;
+}
+
+nav .loginSignArea .formGroup #forgot {
+  margin: 0 0 20px 80px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+nav .loginSignArea .input {
+  width: 100%;
+  padding: 8px 0;
+  margin: 8px 15px;
+  color: #fff;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #0477d4;
+  outline: none;
+  background: transparent;
+}
+
+nav .loginSignArea .btnLogin {
+  width: 75%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin-top: 15px;
+  background: linear-gradient(to rigth #004aac, #41b9ff);
+  background-color: #ffffff;
+  border: 0;
+  outline: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav .loginSignArea p {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bolder;
+  margin: 20px 0 20px 0;
+}
+
+nav .loginSignArea .alterLogin {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-left: 30px;
+}
+
+nav .loginSignArea .alterLogin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+nav .loginSignArea .alterLogin button i {
+  margin-right: 5px;
+}
+
+nav .loginSignArea #loginform, nav .loginSignArea #signform {
+  left: 65px;
+}
+
+.modal i
+{
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-input {
+    width: 50%;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    margin: .7rem auto;
+    border-radius: 4px;
+    width: 50%;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
+}
