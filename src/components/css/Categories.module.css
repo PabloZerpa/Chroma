@@ -1,12 +1,12 @@
 
 /******************************* CATEGORIES BUTTONS *******************************/
-#categories {
+.categories {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
   
-  #categories button, #categories select {
+  .categories button {
     width: 180px;
     height: 96px;
     margin: 15px 15px 15px 15px;
@@ -20,7 +20,7 @@
     cursor: pointer;
   }
   
-  #categories button:hover, #categories select:hover {
+  .categories button:hover{
     color: #ffffff;
     text-shadow: 1px  0px 0px black,
    0px  1px 0px black,
@@ -30,52 +30,52 @@
     transition: .3s;
   }
   
-  #categories button:nth-child(1), #categories select:nth-child(1) {
+  .categories button:nth-child(1) {
     background-image: url("https://i.pinimg.com/236x/18/f3/64/18f364f68b308a5180ed8016dd4e70c2.jpg");
   }
   
-  #categories button:nth-child(2), #categories select:nth-child(2) {
+  .categories button:nth-child(2) {
     background-image: url("https://i.pinimg.com/236x/9a/0a/96/9a0a963053dba3ad106df29cd23e7dab.jpg");
   }
   
-  #categories button:nth-child(3), #categories select:nth-child(3) {
+  .categories button:nth-child(3) {
     background-image: url("https://i.pinimg.com/564x/31/c8/15/31c8150c2a16cb35572ff28433d50513.jpg");
   }
   
-  #categories button:nth-child(4), #categories select:nth-child(4) {
+  .categories button:nth-child(4) {
     background-image: url("https://i.pinimg.com/564x/06/f5/85/06f58589f51b2bb75db523d0b8363e43.jpg");
   }
   
-  #categories button:nth-child(4), #categories select:nth-child(4) {
+  .categories button:nth-child(4) {
     background-image: url("https://i.pinimg.com/564x/06/f5/85/06f58589f51b2bb75db523d0b8363e43.jpg");
   }
   
-  #categories button:nth-child(5), #categories select:nth-child(5) {
+  .categories button:nth-child(5) {
     background-image: url("https://i.pinimg.com/564x/c0/44/dd/c044dd8b51765933a8c69d1d0d180366.jpg");
   }
   
-  #categories button:nth-child(6), #categories select:nth-child(6) {
+  .categories button:nth-child(6) {
     background-image: url("https://i.pinimg.com/236x/ba/71/8f/ba718fba824778b4519ffdf675882daa.jpg");
   }
   
-  #categories button:nth-child(7), #categories select:nth-child(7) {
+  .categories button:nth-child(7) {
     background-image: url("https://i.pinimg.com/236x/f4/5a/ba/f45abad712cc7c5d1d98a5b7325e6946.jpg");
   }
   
-  #categories button:nth-child(8), #categories select:nth-child(8) {
+  .categories button:nth-child(8) {
     background-image: url("https://i.pinimg.com/236x/dd/d8/9c/ddd89cc9673861a5197c09523e3446cf.jpg");
   }
   
-  #categories button:nth-child(9), #categories select:nth-child(9) {
-    background-image: url("https://www.youbrandinc.com/wp-content/uploads/2018/03/cardboard-race-quill-fujita.jpg");
+  .categories button:nth-child(9) {
+    background-image: url("https://www.roadtovr.com/wp-content/uploads/2018/03/cardboard-race-quill-fujita.jpg");
   }
   
-  #categories button:nth-child(10), #categories select:nth-child(10) {
+  .categories button:nth-child(10) {
     background-image: url("https://i.pinimg.com/236x/4a/1c/74/4a1c74a3b606255b166b9cb3538eed47.jpg");
     position: relative;
   }
   
-  #categories button:nth-child(10) #more, #categories select:nth-child(10) #more {
+  .categories button:nth-child(10) .more {
     display: none;
     position: absolute;
     width: 100%;
@@ -89,16 +89,16 @@
     border-radius: 0;
   }
   
-  #categories button:nth-child(10) #more li:hover, #categories select:nth-child(10) #more li:hover {
+  .categories button:nth-child(10) .more li:hover {
     background-color: #0477d4;
   }
   
-  #categories button:nth-child(10):hover > #more, #categories select:nth-child(10):hover > #more {
+  .categories button:nth-child(10):hover > .more {
     display: block;
   }
   
   @media only screen and (max-width: 1000px) {
-    #categories {
+    .categories {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
@@ -108,7 +108,7 @@
   }
   
   @media only screen and (max-width: 600px) {
-    #categories {
+    .categories {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
@@ -118,7 +118,7 @@
   }
   
   @media only screen and (max-width: 300px) {
-    #categories {
+    .categories {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);

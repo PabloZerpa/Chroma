@@ -1,10 +1,10 @@
 import React from 'react';
-import "./Categories.css";
+import style from "./css/Categories.module.css";
 
 const Categories = () => {
 
     return (
-        <ul className="categories" id="categories">
+        <ul className={style.categories} id="categories">
             <button>2D</button>
             <button>3D</button>
             <button>Characters</button>
@@ -15,7 +15,7 @@ const Categories = () => {
             <button>Game Art</button>
             <button>VR/AR</button>
             <button>More
-                <ul id="more">
+                <ul className={style.more} id="more">
                     <li>Creatures</li>
                     <li>Vehicles</li>
                     <li>Sketch</li>

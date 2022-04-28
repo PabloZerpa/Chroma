@@ -14,7 +14,7 @@
   z-index: 999;
 }
 
-.navbar-container {
+.navbarContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@
   max-width: 1500px;
 }
 
-.navbar-logo {
+.navbarLogo {
   color: #1888ff;
   justify-self: start;
   margin-left: 10%;
@@ -38,7 +38,7 @@
   font-size: 1.8rem;
 }
 
-.nav-menu {
+.navMenu {
   display: grid;
   grid-template-columns: repeat(6, auto);
   grid-gap: 10px;
@@ -50,15 +50,15 @@
   margin-left: 10%;
 }
 
-.nav-menu i{
+.navMenu i{
   margin-right: 3px;
 }
 
-.nav-item {
+.navItem {
   height: 80px;
 }
 
-.nav-links {
+.navLinks {
   color: #fff;
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@
   height: 100%;
 }
 
-.nav-links:hover {
+.navLinks:hover {
   border-bottom: 4px solid #1888ff;
   color: #1888ff;
   transition: all 0.2s ease-out;
@@ -77,11 +77,11 @@
   color: #fff;
 }
 
-.menu-icon {
+.menuIcon {
   display: none;
 }
 
-.nav-input {
+.navInput {
   width: 200px;
   height: 35px;
   padding: 8px 20px;
@@ -297,51 +297,58 @@ nav .loginSignArea #loginform, nav .loginSignArea #signform {
     position: relative;
   }
 
-  .nav-input {
+  .navInput {
     width: 50%;
+    margin-left: 25%;
   }
 
-  .nav-menu {
+  .navMenu {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: -100%;
+    left: -200%;
     opacity: 1;
     transition: all 0.5s ease;
   }
 
-  .nav-menu.active {
+  .navMenuActive {
+    display: flex;
+    flex-direction: column;
     background: #242222;
-    left: 0;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: 0%;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    
   }
 
-  .nav-links {
+  .navLinks {
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
   }
 
-  .nav-links:hover {
+  .navLinks:hover {
     background-color: #fff;
     color: #242424;
     border-radius: 0;
   }
 
-  .navbar-logo {
+  .navbarLogo {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(25%, 50%);
   }
 
-  .menu-icon {
+  .menuIcon {
     display: block;
     position: absolute;
     top: 0;
@@ -356,7 +363,7 @@ nav .loginSignArea #loginform, nav .loginSignArea #signform {
     font-size: 2rem;
   }
 
-  .nav-links-mobile {
+  .navLinksMobile {
     display: block;
     text-align: center;
     margin: .7rem auto;
@@ -371,7 +378,7 @@ nav .loginSignArea #loginform, nav .loginSignArea #signform {
     transition: all 0.3s ease-out;
   }
 
-  .nav-links-mobile:hover {
+  .navLinksMobile:hover {
     background: #fff;
     color: #242424;
     transition: 250ms;

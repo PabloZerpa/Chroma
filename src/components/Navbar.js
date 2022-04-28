@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import style from './css/Navbar.module.css';
 import {auth} from "../firebaseConfig";
 
 function Navbar() {
@@ -84,61 +84,61 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+      <nav className={style.navbar}>
+        <div className={style.navbarContainer}>
+          <Link to='/' className={style.navbarLogo} onClick={closeMobileMenu}>
             Chroma
             <i class='fas fa-palette' />
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
+          <div className={style.menuIcon} onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
 
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+          <ul className={click ? style.navMenuActive : style.navMenu}>
+            <li className={style.navItem}>
+              <Link to='/' className={style.navLinks} onClick={closeMobileMenu}>
               <i className="fas fa-home" /> Home
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className={style.navItem}>
               <Link
                 to='/explore'
-                className='nav-links'
+                className={style.navLinks}
                 onClick={closeMobileMenu}
               >
                 <i className="fas fa-compass" /> Explore
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className={style.navItem}>
               <Link
                 to='/blog'
-                className='nav-links'
+                className={style.navLinks}
                 onClick={closeMobileMenu}
               >
                 <i className="fas fa-scroll" /> Blog
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className={style.navItem}>
               <Link
                 to='/forums'
-                className='nav-links'
+                className={style.navLinks}
                 onClick={closeMobileMenu}
               >
                 <i className="fas fa-book" /> Forums
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className={style.navItem}>
               <Link
                 to='/about'
-                className='nav-links'
+                className={style.navLinks}
                 onClick={closeMobileMenu}
               >
                 <i className="fas fa-question-circle" /> About
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className={style.navItem}>
               <input
-                className='nav-input'
+                className={style.navInput}
                 name='search'
                 type='text'
                 placeholder='🔍Search'
@@ -148,36 +148,36 @@ function Navbar() {
           
         </div>
 
-        <div className="loginSignArea">
+        <div className={style.loginSignArea}>
 
-          <div className="modal" id="loginModal">
-            <div className="modalWindow">
-              <div className="modalContent">
-                <div className="closeModal" onClick={resetForm}><a href="#">X</a></div>
-                  <form className="formGroup" id="loginform">
-                    <div className="userGroup">
+          <div className={style.modal} id="loginModal">
+            <div className={style.modalWindow}>
+              <div className={style.modalContent}>
+                <div className={style.closeModal} onClick={resetForm}><a href="#">X</a></div>
+                  <form className={style.formGroup} id="loginform">
+                    <div className={style.userGroup}>
                       <i className="fas fa-at" id="userIcon" />
                       <input 
                         onChange={(e) => {setEmail(e.target.value)}} 
-                        className="input" 
+                        className={style.input} 
                         type="text" 
                         placeholder="Email" 
                         required />
                       </div>
-                                <div className="userGroup">
+                                <div className={style.userGroup}>
                                     <i className="fas fa-key" id="passwordIcon" />
                                     <input 
                                         onChange={(e) => {setPass(e.target.value)}} 
-                                        className="input" 
+                                        className={style.input}
                                         type="password" 
                                         placeholder="Password" 
                                         required />
                                 </div>
                                 <a id="forgot">Forgot Password?</a>
-                                <button className="btnLogin" onClick={loginUser}>Log In</button>
+                                <button className={style.btnLogin} onClick={loginUser}>Log In</button>
                                 <p>OR</p>
 
-                                <div className="alterLogin">
+                                <div className={style.alterLogin}>
                                     <button type="button" className="btnLogin" style={{color: "rgb(209, 26, 26)"}}><i style={{color: "rgb(209, 26, 26)"}} className="fab fa-google"></i>Google</button>
                                     <button type="button" className="btnLogin" style={{color: "rgb(14, 80, 226)"}}><i style={{color: "rgb(14, 80, 226)"}} className="fab fa-linkedin-in"></i>Linkedin</button>
                                     <button type="button" className="btnLogin" style={{color: "rgb(14, 131, 226)"}}><i style={{color: "rgb(14, 131, 226)"}} className="fab fa-twitter"></i>Facebook</button>
@@ -188,32 +188,32 @@ function Navbar() {
                     </div>
                 </div>
 
-                <div className="modal" id="signModal" >
-                    <div className="modalWindow">
-                        <div className="modalContent">
+                <div className={style.modal} id="signModal" >
+                    <div className={style.modalWindow}>
+                        <div className={style.modalContent}>
 
-                            <div className="closeModal" onClick={resetForm}><a href="#">X</a></div>
+                            <div className={style.closeModal} onClick={resetForm}><a href="#">X</a></div>
 
-                            <form onSubmit={registerUser} className="formGroup" id="signform">
-                                <div className="userGroup">
+                            <form onSubmit={registerUser} className={style.formGroup} id="signform">
+                                <div className={style.userGroup}>
                                     <i className="fas fa-user" id="userIcon" />
                                     <input 
                                         onChange={(e) => {setName(e.target.value)}} 
-                                        className="input" 
+                                        className={style.input}
                                         type="text" 
                                         placeholder="Username" 
                                         required />
                                 </div>
-                                <div className="userGroup">
+                                <div className={style.userGroup}>
                                     <i className="fas fa-at" id="userIcon" />
                                     <input 
                                         onChange={(e) => {setEmail(e.target.value)}} 
-                                        className="input" 
+                                        className={style.input}
                                         type="email" 
                                         placeholder="Email" 
                                         required />
                                 </div>
-                                <div className="userGroup">
+                                <div className={style.userGroup}>
                                     <i className="fas fa-key" id="userIcon" />
                                     <input 
                                         onChange={(e) => {setPass(e.target.value)}} 
@@ -222,31 +222,31 @@ function Navbar() {
                                         placeholder="Password" 
                                         required />
                                 </div>
-                                <div className="userGroup">
+                                <div className={style.userGroup}>
                                     <i className="fas fa-lock" id="userIcon" />
                                     <input 
                                         onChange={(e) => {setRePass(e.target.value)}} 
-                                        className="input" 
+                                        className={style.input}
                                         type="password" 
                                         placeholder="Reenter Password" 
                                         required />
                                 </div>
-                                <input type="submit" className="btnLogin" value="Sign Up" />
+                                <input type="submit" className={style.btnLogin} value="Sign Up" />
                                 <p>OR</p>
 
-                                <div className="alterLogin">
-                                    <button type="button" ref={googleBtn} onClick={onButtonClick} className="btnLogin" id="google" style={{color: "rgb(209, 26, 26)"}}><i style={{color: "rgb(209, 26, 26)"}} className="fab fa-google"></i>Google</button>
-                                    <button type="button" className="btnLogin" style={{color: "rgb(14, 80, 226)"}}><i style={{color: "rgb(14, 80, 226)"}} className="fab fa-linkedin-in"></i>Linkedin</button>
-                                    <button type="button" className="btnLogin" style={{color: "rgb(14, 131, 226)"}}><i style={{color: "rgb(14, 131, 226)"}} className="fab fa-twitter"></i>Facebook</button>
-                                    <button type="button" className="btnLogin" style={{color: "rgb(14, 200, 226)"}}><i style={{color: "rgb(14, 200, 226)"}} className="fab fa-facebook-f"></i>Twitter</button>
+                                <div className={style.alterLogin}>
+                                    <button type="button" ref={googleBtn} onClick={onButtonClick} className={style.btnLogin} id="google" style={{color: "rgb(209, 26, 26)"}}><i style={{color: "rgb(209, 26, 26)"}} className="fab fa-google"></i>Google</button>
+                                    <button type="button" className={style.btnLogin} style={{color: "rgb(14, 80, 226)"}}><i style={{color: "rgb(14, 80, 226)"}} className="fab fa-linkedin-in"></i>Linkedin</button>
+                                    <button type="button" className={style.btnLogin} style={{color: "rgb(14, 131, 226)"}}><i style={{color: "rgb(14, 131, 226)"}} className="fab fa-twitter"></i>Facebook</button>
+                                    <button type="button" className={style.btnLogin} style={{color: "rgb(14, 200, 226)"}}><i style={{color: "rgb(14, 200, 226)"}} className="fab fa-facebook-f"></i>Twitter</button>
                                 </div>
                             </form>
                         </div>
                     </div> 
                 </div>
 
-                <button className="navLogin" id="logIn"><a href="#loginModal">Log In</a></button> 
-                <button className="navLogin" id="signUp"><a href="#signModal">Sign Up</a></button> 
+                <button className={style.navLogin} id="logIn"><a href="#loginModal">Log In</a></button> 
+                <button className={style.navLogin} id="signUp"><a href="#signModal">Sign Up</a></button> 
             </div>
       </nav>
     </>
