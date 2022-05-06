@@ -52,10 +52,10 @@ function Navbar() {
               }
               catch(e)
               {
-                  if(e.code == "auth/invalid-email"){
+                  if(e.code === "auth/invalid-email"){
                       console.log("Incorrect email");
                   }
-                  if(e.code == "auth/weak-password"){
+                  if(e.code === "auth/weak-password"){
                       console.log("Weak password");
                   }
               }
@@ -71,7 +71,7 @@ function Navbar() {
       {
           auth.signInWithEmailAndPassword(email, pass)
           .then((r) => console.log(r))
-          .catch((err) => { if(err.code == "auth/wrong-password"){ console.log("password Incorrecta") } })
+          .catch((err) => { if(err.code === "auth/wrong-password"){ console.log("password Incorrecta") } })
           resetForm();
       }
   }
@@ -173,7 +173,7 @@ function Navbar() {
                                         placeholder="Password" 
                                         required />
                                 </div>
-                                <a id="forgot">Forgot Password?</a>
+                                <a id="forgot" href="#">Forgot Password?</a>
                                 <button className={style.btnLogin} onClick={loginUser}>Log In</button>
                                 <p>OR</p>
 

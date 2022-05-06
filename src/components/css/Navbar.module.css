@@ -129,14 +129,14 @@
 
 /* ===================  MODEL ============================== */
 
-nav .loginSignArea {
+.loginSignArea {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 100px;
 }
 
-nav .loginSignArea .modal {
+.loginSignArea .modal {
   background-color: rgba(0, 0, 0, 0.75);
   position: fixed;
   top: 0;
@@ -147,25 +147,25 @@ nav .loginSignArea .modal {
   pointer-events: none;
 }
 
-nav .loginSignArea #loginModal:target {
+.loginSignArea #loginModal:target {
   opacity: 1;
   transition: .5s;
   pointer-events: auto;
 }
 
-nav .loginSignArea #signModal:target {
+.loginSignArea #signModal:target {
   opacity: 1;
   transition: .5s;
   pointer-events: auto;
 }
 
-nav .loginSignArea .modalWindow {
+.loginSignArea .modalWindow {
   height: 100%;
   width: 100%;
   position: absolute;
 }
 
-nav .loginSignArea .modalContent {
+.loginSignArea .modalContent {
   width: 400px;
   height: 600px;
   position: relative;
@@ -176,7 +176,7 @@ nav .loginSignArea .modalContent {
   border: 3px solid #0593e6;
 }
 
-nav .loginSignArea .modalContent .closeModal {
+.loginSignArea .modalContent .closeModal {
   position: relative;
   width: 20px;
   height: 20px;
@@ -188,18 +188,18 @@ nav .loginSignArea .modalContent .closeModal {
   justify-content: center;
 }
 
-nav .loginSignArea .modalContent .closeModal a {
+.loginSignArea .modalContent .closeModal a {
   color: #000;
 }
 
-nav .loginSignArea .buttons {
+.loginSignArea .buttons {
   position: relative;
   width: 200px;
   margin: 40px auto;
   border-radius: 8px;
 }
 
-nav .loginSignArea .formGroup {
+.loginSignArea .formGroup {
   top: 15%;
   position: absolute;
   width: 280px;
@@ -209,27 +209,27 @@ nav .loginSignArea .formGroup {
   transition: .5s;
 }
 
-nav .loginSignArea .formGroup button:hover {
+.loginSignArea .formGroup button:hover {
   background-color: #adadad;
   transition: .5s;
 }
 
-nav .loginSignArea .formGroup i {
+.loginSignArea .formGroup i {
   padding: 8px 0;
   margin: 8px 0;
 }
 
-nav .loginSignArea .formGroup .userGroup {
+.loginSignArea .formGroup .userGroup {
   display: flex;
 }
 
-nav .loginSignArea .formGroup #forgot {
+.loginSignArea .formGroup #forgot {
   margin: 0 0 20px 80px;
   font-size: 12px;
   cursor: pointer;
 }
 
-nav .loginSignArea .input {
+.loginSignArea .input {
   width: 100%;
   padding: 8px 0;
   margin: 8px 15px;
@@ -242,7 +242,7 @@ nav .loginSignArea .input {
   background: transparent;
 }
 
-nav .loginSignArea .btnLogin {
+.loginSignArea .btnLogin {
   width: 75%;
   padding: 10px 30px;
   cursor: pointer;
@@ -258,32 +258,32 @@ nav .loginSignArea .btnLogin {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-nav .loginSignArea p {
+.loginSignArea p {
   color: #FFFFFF;
   font-size: 12px;
   font-weight: bolder;
   margin: 20px 0 20px 0;
 }
 
-nav .loginSignArea .alterLogin {
+.loginSignArea .alterLogin {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   margin-left: 30px;
 }
 
-nav .loginSignArea .alterLogin button {
+.loginSignArea .alterLogin button {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px 30px;
 }
 
-nav .loginSignArea .alterLogin button i {
+.loginSignArea .alterLogin button i {
   margin-right: 5px;
 }
 
-nav .loginSignArea #loginform, nav .loginSignArea #signform {
+.loginSignArea #loginform, .loginSignArea #signform {
   left: 65px;
 }
 
