@@ -21,8 +21,6 @@ function Footer() {
             <Link to='/'>Support</Link>
             <Link to='/'>Sponsorships</Link>
           </div>
-        </div>
-        <div className={style.footerLinkWrapper}>
           <div className={style.footerLinkItems}>
             <h2>Social Media</h2>
             <Link to='/'>Instagram</Link>

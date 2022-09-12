@@ -6,7 +6,7 @@
   background: linear-gradient(90deg, rgb(29, 29, 29) 0%, rgb(22, 22, 22) 100%);
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 1rem;
   position: sticky;
@@ -16,8 +16,9 @@
 
 .navbarContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-right: 10%;
   height: 80px;
   max-width: 1500px;
 }
@@ -25,7 +26,6 @@
 .navbarLogo {
   color: #1888ff;
   justify-self: start;
-  margin-left: 10%;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -39,15 +39,14 @@
 }
 
 .navMenu {
-  display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
   list-style: none;
   text-align: center;
   font-weight: bold;
   width: 60vw;
-  justify-content: center;
-  margin-left: 10%;
 }
 
 .navMenu i{
@@ -79,6 +78,7 @@
 
 .menuIcon {
   display: none;
+  color: #1888ff;
 }
 
 .navInput {
@@ -103,19 +103,11 @@
   border-radius: 4px;
   outline: none;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
   color: #000;
   cursor: pointer;
   background-color: var(--primary);
-}
-
-.navLogin:hover {
-  padding: 6px 18px;
-  background-color: transparent;
-  color: var(--primary);
-  border-radius: 4px;
-  border: 2px solid var(--primary);
-  transition: all 0.3s ease-out;
 }
 
 .navLogin a {
@@ -123,49 +115,72 @@
   text-decoration: none;
 }
 
-.navLogin a:hover {
-  color: var(--primary);
+/* ===================  MODAL ============================== */
+
+.modalmask {
+  position: fixed;
+  font-family: Arial, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalmask:target {
+  opacity:1;
+  pointer-events: auto;
 }
 
-/* ===================  MODEL ============================== */
-
-.loginSignArea {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.modalbox{
   margin-left: 100px;
+  position: relative;
+  -webkit-transition: all 500ms ease-in;
+  -moz-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+   
 }
 
-.loginSignArea .modal {
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: 1px;
+  text-align: center;
+  top: 1px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius:3px;
+
+}
+.close:hover {
+  background: #FAAC58;
+  color:#222;
+}
+
+.modalbox .modal {
   background-color: rgba(0, 0, 0, 0.75);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0;
-  pointer-events: none;
 }
 
-.loginSignArea #loginModal:target {
+.modalbox #signModal:target {
   opacity: 1;
   transition: .5s;
   pointer-events: auto;
 }
 
-.loginSignArea #signModal:target {
-  opacity: 1;
-  transition: .5s;
-  pointer-events: auto;
-}
-
-.loginSignArea .modalWindow {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-.loginSignArea .modalContent {
+.modalbox .modalContent {
   width: 400px;
   height: 600px;
   position: relative;
@@ -174,62 +189,72 @@
   overflow: hidden;
   border-radius: 30px;
   border: 3px solid #0593e6;
-}
-
-.loginSignArea .modalContent .closeModal {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  top: 1%;
-  left: 90%;
-  border-radius: 3px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.loginSignArea .modalContent .closeModal a {
+.closeModal {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  padding: 3px 0 0 6px;
+  background-color: #0477d4;
+  border-radius: 3px;
+  border: #000 1px solid;
+  top: -45%;
+  left: 40%;
+}
+
+.modalbox .modalContent .closeModal a {
   color: #000;
+  text-decoration: none;
 }
 
-.loginSignArea .buttons {
+.modalbox .buttons {
   position: relative;
   width: 200px;
   margin: 40px auto;
   border-radius: 8px;
 }
 
-.loginSignArea .formGroup {
+.modalbox .formGroup {
   top: 15%;
   position: absolute;
   width: 280px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   transition: .5s;
 }
 
-.loginSignArea .formGroup button:hover {
+.modalbox .formGroup a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.modalbox .formGroup button:hover {
   background-color: #adadad;
   transition: .5s;
 }
 
-.loginSignArea .formGroup i {
+.modalbox .formGroup i {
   padding: 8px 0;
   margin: 8px 0;
 }
 
-.loginSignArea .formGroup .userGroup {
+.modalbox .formGroup .userGroup {
   display: flex;
 }
 
-.loginSignArea .formGroup #forgot {
+.modalbox .formGroup #forgot {
   margin: 0 0 20px 80px;
   font-size: 12px;
   cursor: pointer;
 }
 
-.loginSignArea .input {
+.modalbox .input {
   width: 100%;
   padding: 8px 0;
   margin: 8px 15px;
@@ -242,7 +267,7 @@
   background: transparent;
 }
 
-.loginSignArea .btnLogin {
+.modalbox .btnLogin {
   width: 75%;
   padding: 10px 30px;
   cursor: pointer;
@@ -258,33 +283,28 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.loginSignArea p {
+.modalbox p {
   color: #FFFFFF;
   font-size: 12px;
   font-weight: bolder;
   margin: 20px 0 20px 0;
 }
 
-.loginSignArea .alterLogin {
+.modalbox .alterLogin {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  margin-left: 30px;
+  gap: 20px;
 }
 
-.loginSignArea .alterLogin button {
+.modalbox .alterLogin button {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   padding: 0px 30px;
-}
-
-.loginSignArea .alterLogin button i {
-  margin-right: 5px;
-}
-
-.loginSignArea #loginform, .loginSignArea #signform {
-  left: 65px;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
 .modal i
@@ -293,9 +313,6 @@
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
 
   .navInput {
     width: 50%;
@@ -303,8 +320,8 @@
   }
 
   .navMenu {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 90vh;
     position: absolute;
@@ -315,9 +332,10 @@
   }
 
   .navMenuActive {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     background: #242222;
+    list-style: none;
     width: 100%;
     height: 90vh;
     position: absolute;

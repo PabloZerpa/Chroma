@@ -1,10 +1,10 @@
 
-
 .footerContainer {
   background: linear-gradient(90deg, rgb(29, 29, 29) 0%, rgb(22, 22, 22) 100%);
   padding: 1rem 0 1rem 0;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }

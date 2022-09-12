@@ -1,5 +1,5 @@
 # Chroma
-## Url: https://chroma-website-example.herokuapp.com
+## Url: https://chroma-website.netlify.app/
 
 # Screenshot
 ![](./public/screencapture-chroma.png)
