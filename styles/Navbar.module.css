@@ -1,0 +1,401 @@
+
+.navbar {
+  background: linear-gradient(90deg, rgb(29, 29, 29) 0%, rgb(22, 22, 22) 100%);
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 10%;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.navbarLogo {
+  color: #1888ff;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fa-palette {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+  width: 60vw;
+}
+
+.navMenu i{
+  margin-right: 3px;
+}
+
+.navItem {
+  height: 80px;
+}
+
+.navLinks {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.navLinks:hover {
+  border-bottom: 4px solid #1888ff;
+  color: #1888ff;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.menuIcon {
+  display: none;
+  color: #1888ff;
+}
+
+.navInput {
+  width: 200px;
+  height: 35px;
+  padding: 8px 20px;
+  border-radius: 3px;
+  margin: 20px 0px 16px 0px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background: #111;
+  color: #fff;
+  border: none;
+}
+
+.navLogin {
+  width: 105px;
+  height: 40px;
+  padding: 8px 20px;
+  margin: 0 0px 0 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  background-color: #1888ff;
+}
+
+.navLogin a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* ===================  MODAL ============================== */
+
+.modalmask {
+  position: fixed;
+  font-family: Arial, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalmask:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modalbox{
+  margin-left: 100px;
+  position: relative;
+  -webkit-transition: all 500ms ease-in;
+  -moz-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+   
+}
+
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: 1px;
+  text-align: center;
+  top: 1px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius:3px;
+
+}
+.close:hover {
+  background: #FAAC58;
+  color:#222;
+}
+
+.modalbox .modal {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modalbox #signModal:target {
+  opacity: 1;
+  transition: .5s;
+  pointer-events: auto;
+}
+
+.modalbox .modalContent {
+  width: 400px;
+  height: 600px;
+  position: relative;
+  margin: 8% auto;
+  background: #000;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 3px solid #0593e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeModal {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  padding: 3px 0 0 6px;
+  background-color: #0477d4;
+  border-radius: 3px;
+  border: #000 1px solid;
+  top: -45%;
+  left: 40%;
+}
+
+.modalbox .modalContent .closeModal a {
+  color: #000;
+  text-decoration: none;
+}
+
+.modalbox .buttons {
+  position: relative;
+  width: 200px;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+
+.modalbox .formGroup {
+  top: 15%;
+  position: absolute;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.modalbox .formGroup a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.modalbox .formGroup button:hover {
+  background-color: #adadad;
+  transition: .5s;
+}
+
+.modalbox .formGroup i {
+  padding: 8px 0;
+  margin: 8px 0;
+}
+
+.modalbox .formGroup .userGroup {
+  display: flex;
+}
+
+.modalbox .formGroup #forgot {
+  margin: 0 0 20px 80px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.modalbox .input {
+  width: 100%;
+  padding: 8px 0;
+  margin: 8px 15px;
+  color: #fff;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #0477d4;
+  outline: none;
+  background: transparent;
+}
+
+.modalbox .btnLogin {
+  width: 75%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin-top: 15px;
+  background: linear-gradient(to rigth #004aac, #41b9ff);
+  background-color: #ffffff;
+  border: 0;
+  outline: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modalbox p {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bolder;
+  margin: 20px 0 20px 0;
+}
+
+.modalbox .alterLogin {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.modalbox .alterLogin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 30px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.modal i
+{
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 960px) {
+
+  .navInput {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -200%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .navMenuActive {
+    flex-direction: column;
+    justify-content: center;
+    background: #242222;
+    list-style: none;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: 0%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    
+  }
+
+  .navLinks {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navLinks:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  .navbarLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menuIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .navLinksMobile {
+    display: block;
+    text-align: center;
+    margin: .7rem auto;
+    border-radius: 4px;
+    width: 50%;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .navLinksMobile:hover {
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
+}
