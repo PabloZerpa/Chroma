@@ -1,5 +1,5 @@
 # Chroma
-## Url: https://chroma-website.netlify.app/
+## Url: https://choma-website.vercel.app/
 
 # Screenshot
 ![](./public/screencapture-chroma.png)
